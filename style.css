@@ -20,7 +20,7 @@ height: 100%;
 
 #menu {
     overflow: hidden;
-    background-color:#455050;
+    background-color:#393e41;
     overflow: hidden;
     position: sticky;
     text-align: center;
@@ -36,7 +36,7 @@ height: 100%;
 }
 
 
-
+/* colour pallete https://coolors.co/393e41-d4aa7d-62b6cb-4f6d7a-f96f5d  */
 
 @media screen and (max-width: 600px) {
     #menu a:not(:first-child) {display: none;}
@@ -67,7 +67,7 @@ height: 100%;
     margin: 0 auto;
     display: inline-block;
     /* float: left; */
-    color: #282D2D;
+    color: #62b6cb;
     text-align: center;
     padding: 14px 16px;
     padding-right: 5%;
