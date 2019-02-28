@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 
-<html> 
+<html lang="en" > 
 <head>
 <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,12 +21,16 @@
                   x.className = "topnav";
                 }
               } 
+
+
+
               
-        </script>
+</script>
 
 
 <body>
-  
+    <script src='https://unpkg.com/delaunator@2.0.0/delaunator.min.js'></script>
+    <script  src="index.js"></script>
     <div id="menu" class="topnav">
     <a class="active" href="#home">Home</a>
     <a href="#news">News</a>
@@ -37,6 +41,7 @@
     </div>
 
     <div id="welcomePic"></div>
+    <canvas id="canvas"></canvas>
    
       
 </body>
