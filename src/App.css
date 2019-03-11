@@ -36,19 +36,23 @@ canvas {
   margin: 0 auto;
   display: inline-block;
   /* float: left; */
-  color: #62b6cb;
+  color: #ddd;
   text-align: center;
   padding: 14px 16px;
   padding-right: 5%;
   padding-left: 5%;
   text-decoration: none;
-  
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+  transition: all .1s ease-in;
   
 }
 
 #menu a:hover {
-  background-color: #ddd;
-  color: #282D2D;
+  color: #62b6cb;
+  /* background-color: #ddd; */
+  /* color: #282D2D; */
 }
 
 .App-logo {
