@@ -3,6 +3,12 @@
 }
 
 
+body {
+  background-color: #282c34;
+
+}
+
+
 #menu {
   overflow: hidden;
   background-color:#393e41;
@@ -13,6 +19,13 @@
   width: 100%;
   /* height: 5%; */
   /* box-shadow: 5px 5px 8px #13191a; */
+}
+
+canvas {
+  display:block;
+  
+  position: fixed;
+  /* z-index: -1; */
 }
 
 
