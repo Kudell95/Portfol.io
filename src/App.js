@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import Particles from 'react-particles-js';
 
+
 class App extends Component {
   render() {
     return (
+        
       <div className="App">
       
           <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
@@ -91,5 +93,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
