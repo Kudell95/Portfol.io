@@ -12,19 +12,17 @@ export default class Home extends Component {
     return (
   <div className="Home">
           <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
-          <div id="menu" class="topnav">
-          <a class="active" href="#home">Home</a>
+          <div id="menu" className="topnav">
+          <a className="active" href="#home">Home</a>
           <a href="#news">Programs</a>
           <a href="#contact">Games</a>
           <a href="#about">3d Art</a>
           </div>
 
-  <body>
-
 
 
      <div id='particle-div'>
-          <Particles class="particles"
+          <Particles className="particles"
                 params={{
                   "particles": {
                       "number": {
@@ -72,7 +70,6 @@ export default class Home extends Component {
     </div>
 
 
-</body>
 </div>
     );
   }
