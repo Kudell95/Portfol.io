@@ -13,28 +13,42 @@ export default class Home extends Component {
   <div className="Home">
           <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
           <div id="menu" className="topnav">
-          <a className="active" href="#home">Home</a>
+          <a id="active" href="#home">Home</a>
           <a href="#news">Programs</a>
           <a href="#contact">Games</a>
           <a href="#about">3d Art</a>
           </div>
 
 
+ <div id="container4">
+        <div id="info_panel">
+        <p>Hi... My name's Matt and I like programming</p>
+        </div>
+</div>
+
+
+
+
+
+{/* TODO: add colour */}
 
      <div id='particle-div'>
           <Particles className="particles"
                 params={{
                   "particles": {
                       "number": {
-                          "value": 60,
+                          "value": 90,
                           "density": {
                               "enable": true,
-                              "value_area": 1500
+                              "value_area": 1800
                           }
+                      },
+                      "color": {
+                        "value": "#16a5cf"
                       },
                       "line_linked": {
                           "enable": true,
-                          "opacity": 0.04
+                          "opacity": 0.08
                       },
                       "move": {
                           "direction": "right",
@@ -47,7 +61,7 @@ export default class Home extends Component {
                           "anim": {
                               "enable": true,
                               "speed": 1,
-                              "opacity_min": 0.08
+                              "opacity_min": 0.4
                           }
                       }
                   },

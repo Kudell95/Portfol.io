@@ -8,6 +8,11 @@ html {
 height: 100%;
 }
 
+#active {
+  color: #62b6cb;  
+}
+
+
 #welcomePic {
 
     /* background-image: "background image.png"; */
