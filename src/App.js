@@ -1,46 +1,36 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import Particles from 'react-particles-js';
 
-
 class App extends Component {
-    
   render() {
-      
     return (
-        <div>
-        {this.props.children}
-        </div>
-        
       <div className="App">
-      
-          <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
-          <div id="menu" class="topnav">
-          <a class="active" href="#home">Home</a>
-          <a href="#news">Programs</a>
-          <a href="#contact">Games</a>
-          <a href="#about">3d Art</a>
-          </div>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+         
+        </header>
 
-  <body>
+        <body>
 
-
-{/* Main Div */}
-     <div>
-          <Particles class="particles"
+        <div id='particle-div'>
+          <Particles className="particles"
                 params={{
                   "particles": {
                       "number": {
-                          "value": 60,
+                          "value": 90,
                           "density": {
                               "enable": true,
-                              "value_area": 1500
+                              "value_area": 1800
                           }
+                      },
+                      "color": {
+                        "value": "#16a5cf"
                       },
                       "line_linked": {
                           "enable": true,
-                          "opacity": 0.04
+                          "opacity": 0.08
                       },
                       "move": {
                           "direction": "right",
@@ -53,7 +43,7 @@ class App extends Component {
                           "anim": {
                               "enable": true,
                               "speed": 1,
-                              "opacity_min": 0.08
+                              "opacity_min": 0.4
                           }
                       }
                   },
@@ -73,31 +63,11 @@ class App extends Component {
                   "retina_detect": true
            }} />
 
-    <header className="App-header">
-          
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-      Portfolio in Development
-      </p>
-    
-    </header>
-
-{/* put content here. */}
-
-
-
-
-
-</div>
-
-
-
-
-</body>
-</div>
+    </div>
+        </body>
+      </div>
     );
   }
 }
-
 
 export default App;
