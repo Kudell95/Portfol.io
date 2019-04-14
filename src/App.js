@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
-import { debug } from 'util';
+
 
 
 
@@ -30,18 +30,18 @@ class App extends Component {
                           }
                       },
                       "color": {
-                        "value": "#16a5cf"
+                        "value": "#77dfff"
                       },
                       "line_linked": {
                           "enable": true,
-                          "opacity": 0.08
+                          "opacity": 0.1
                       },
                       "move": {
                           "direction": "right",
                           "speed": 0.1
                       },
                       "size": {
-                          "value": 1.7
+                          "value": 1.9
                       },
                       "opacity": {
                           "anim": {
@@ -71,7 +71,7 @@ class App extends Component {
               
         </div>
 
-        {/* <br/> <br/> <br/> <br/> <br/> */}
+        
         <div id="intro">
         <div id="intro-text">
         <h1>Hi, my name is Matt.</h1>

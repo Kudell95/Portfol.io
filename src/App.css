@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+a,
+a label {
+    cursor: pointer;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -42,10 +47,12 @@ body {
   padding: 0;
   position: fixed;
   list-style: none;
-  background-color: #44464b;
+  background-color: #505153;
   border-bottom: 1px solid rgb(105, 102, 109); 
   border-top: 1px solid rgb(105, 102, 109);
 }
+
+
 #navbar ul {
   list-style-type:none;
 }
@@ -61,7 +68,7 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   /* font-weight: bold; */
-  color: #16a5cf;
+  color: whitesmoke;
   border-right: 1px solid rgb(105, 102, 109); 
 
 }
@@ -84,6 +91,7 @@ body {
   /* float: left; */
   padding-top: 25%;
   color: whitesmoke;
+  
   text-align: center;
   left: 0;
   position: inline-block;
