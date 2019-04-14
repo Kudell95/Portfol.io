@@ -14,9 +14,23 @@ class App extends Component {
   // } 
   render() {    
     return (
-      <div className="App">
      
-      <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
+      <div className="App">
+
+<header><link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> </header>
+
+
+     <div id="navbar">
+      <ul id="nav">
+              <li><a href="#Contact">Contact</a></li>
+              <li><a href="#Projects">Projects</a></li>
+              <li><a href="#Skills">Skills</a></li>
+              <li><a href="#Home">Home</a></li>     
+      </ul>
+      </div>
+
+
+     
         {/* background particles */}
         <div id='particle-div'>
           <Particles className="particles"
@@ -57,19 +71,7 @@ class App extends Component {
         </div>
             
         
-        <div id="navbar">
-              <ul id="nav">
-              <li><a href="#Contact" >Contact</a></li>
-              <li><a href="#Projects">Projects</a></li>
-              <li><a href="#Skills">Skills</a></li>
-              <li><a href="#Home">Home</a></li>
-               
-                
-                
-              </ul>
-
-              
-        </div>
+        
 
         
         <div id="intro">

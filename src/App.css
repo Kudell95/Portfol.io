@@ -3,17 +3,12 @@
   margin: 0;
 }
 
-a,
-a label {
-    cursor: pointer;
-}
-
 .App {
   text-align: center;
   background-color: #282c34;
   margin:0px;
   padding:0px;
-  background:-moz-element(#particle-div);
+  /* background:-moz-element(#particle-div); */
   
 }
 
@@ -50,16 +45,19 @@ body {
   background-color: #505153;
   border-bottom: 1px solid rgb(105, 102, 109); 
   border-top: 1px solid rgb(105, 102, 109);
+  z-index: 100;
 }
 
 
 #navbar ul {
   list-style-type:none;
+  z-index: 100;
 }
 
 #navbar li {
   float: right; 
-  display:inline-block;
+  /* display:inline-block; */
+  z-index: 100;
 }
 
 #navbar li a {
@@ -70,12 +68,9 @@ body {
   /* font-weight: bold; */
   color: whitesmoke;
   border-right: 1px solid rgb(105, 102, 109); 
-
+  z-index: 100;
 }
 
-#navbar li a.active{
-  color: white;
-}
 
 #intro{
   /* padding-top: 150px; */
@@ -84,14 +79,14 @@ body {
   right:0;
   margin-left:auto;
   margin-right:auto;
-
+  z-index: 10;
 }
 
 #intro-text{
   /* float: left; */
   padding-top: 20%;
   color: whitesmoke;
-  
+  z-index: 10;
   text-align: center;
   left: 0;
   position: inline-block;
