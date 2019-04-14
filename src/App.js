@@ -76,7 +76,7 @@ class App extends Component {
         <div id="intro-text">
         <h1>Hi, my name is Matt.</h1>
         <br/>
-        <h1>And i like to program.</h1>
+        <h1>And i am a programmer.</h1>
         </div>
         </div>
          
