@@ -1,29 +1,28 @@
+
+* {
+  margin: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:0px;
+  padding:0px;
+  background:-moz-element(#particle-div);
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+body {
+  background-color: #282c34;
+  margin:0px;
+    padding:0px;
 }
 
 #particle-div{
+
+  margin:0px;
+    padding:0px;
   pointer-events: none;
   position: absolute;
     width: 100%;
@@ -32,4 +31,62 @@
 }
 
 
+
+
+#navbar {
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+  margin: 0 0 3em 0;
+  padding: 0;
+  position: fixed;
+  list-style: none;
+  background-color: #44464b;
+  border-bottom: 1px solid rgb(105, 102, 109); 
+  border-top: 1px solid rgb(105, 102, 109);
+}
+#navbar ul {
+  list-style-type:none;
+}
+
+#navbar li {
+  float: right; 
+  display:inline-block;
+}
+
+#navbar li a {
+  font-family: '8BITWONDERNominal'; 
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  /* font-weight: bold; */
+  color: #16a5cf;
+  border-right: 1px solid rgb(105, 102, 109); 
+
+}
+
+#navbar li a.active{
+  color: white;
+}
+
+#intro{
+  /* padding-top: 150px; */
+  position:absolute;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+#intro-text{
+  /* float: left; */
+  padding-top: 25%;
+  color: whitesmoke;
+  text-align: center;
+  left: 0;
+  position: inline-block;
+  top:  0;
+}
 

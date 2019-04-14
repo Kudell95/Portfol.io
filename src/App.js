@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Particles from 'react-particles-js';
+import { debug } from 'util';
+
+
+
 
 class App extends Component {
-  render() {
+  
+  // setactive(){
+  //   console.log("active test");
+    
+  // } 
+  render() {    
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-         
-        </header>
-
-        <body>
-
+     
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> 
+        {/* background particles */}
         <div id='particle-div'>
           <Particles className="particles"
                 params={{
                   "particles": {
                       "number": {
-                          "value": 90,
+                          "value": 130,
                           "density": {
                               "enable": true,
-                              "value_area": 1800
+                              "value_area": 1600
                           }
                       },
                       "color": {
@@ -34,37 +38,49 @@ class App extends Component {
                       },
                       "move": {
                           "direction": "right",
-                          "speed": 0.05
+                          "speed": 0.1
                       },
                       "size": {
-                          "value": 1
+                          "value": 1.7
                       },
                       "opacity": {
                           "anim": {
                               "enable": true,
                               "speed": 1,
-                              "opacity_min": 0.4
+                              "opacity_min": 0
                           }
                       }
                   },
-                  "interactivity": {
-                      "events": {
-                          "onclick": {
-                              "enable": true,
-                              "mode": "push"
-                          }
-                      },
-                      "modes": {
-                          "push": {
-                              "particles_nb": 1
-                          }
-                      }
-                  },
+                  
                   "retina_detect": true
            }} />
+        </div>
+            
+        
+        <div id="navbar">
+              <ul id="nav">
+              <li><a href="#Contact" >Contact</a></li>
+              <li><a href="#Projects">Projects</a></li>
+              <li><a href="#Skills">Skills</a></li>
+              <li><a href="#Home">Home</a></li>
+               
+                
+                
+              </ul>
 
-    </div>
-        </body>
+              
+        </div>
+
+        {/* <br/> <br/> <br/> <br/> <br/> */}
+        <div id="intro">
+        <div id="intro-text">
+        <h1>Hi, my name is Matt.</h1>
+        <br/>
+        <h1>And i like to program.</h1>
+        </div>
+        </div>
+         
+  
       </div>
     );
   }
