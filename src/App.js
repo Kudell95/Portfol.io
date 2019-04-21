@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
+import $ from 'jquery'; 
 
 
 
@@ -8,13 +9,25 @@ import Particles from 'react-particles-js';
 
 class App extends Component {
   
-  // setactive(){
-  //   console.log("active test");
-    
-  // } 
+
+  state = {
+    isTop: true,
+  };
+
+  componentDidMount() {
+    var height = window.innerHeight;
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY < 100;
+      if (isTop !== this.state.isTop) {
+          this.setState({ isTop })
+      }
+    });
+  }
+
+
   render() {    
     return (
-     
+      
       <div className="App">
 
 <header><link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> </header>
@@ -48,14 +61,14 @@ class App extends Component {
                       },
                       "line_linked": {
                           "enable": true,
-                          "opacity": 0.1
+                          "opacity": 0.02
                       },
                       "move": {
                           "direction": "right",
                           "speed": 0.1
                       },
                       "size": {
-                          "value": 1.9
+                          "value": 1.6
                       },
                       "opacity": {
                           "anim": {
@@ -71,17 +84,54 @@ class App extends Component {
         </div>
             
         
-        
+        <div id="sections">
 
         
-        <div id="intro">
+        <section id="Home">
         <div id="intro-text">
         <h1>Hi, my name is Matt.</h1>
         <br/>
         <h1>And i'm a programmer.</h1>
         </div>
+        </section>
+
+        
+        <section id="Skills">
+        <div id="skills-text">
+        <h2 style={{ position: 'fixed', top: 0 }}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2>
+        {/* <h1>Hi, my name is Matt.</h1>
+        <br/>
+        <h1>And i'm a programmer.</h1> */}
+        <div id="skills-table">
+          <table cellpadding="10">
+            <colgroup>
+              <col />
+              <col />
+            </colgroup>
+            <tbody>
+            <tr>
+              <th><h1>Front-end</h1></th>
+              <th><h1>Back-end</h1></th>
+              <th><h1>Other</h1></th>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>NodeJs</td>
+              <td>Git</td>
+            </tr>
+            <tr>
+              <td>Angular</td>
+              <td>C++</td>
+              <td>Linux CLI</td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
         </div>
+        </section>
          
+
+        </div>
   
       </div>
     );
