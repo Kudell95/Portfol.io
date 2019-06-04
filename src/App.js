@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
 import $ from 'jquery'; 
-
+import ReactTable from 'react-table'
+import 'react-table/react-table.css'
 
 
 
@@ -25,7 +26,24 @@ class App extends Component {
   }
 
 
-  render() {    
+  render() {
+        const data = [{
+        name: 'WordCloud Generator',
+        LiveLink: "https://pdftowordcloud.herokuapp.com/",
+        link: ["https://github.com/Kudell95/pdfWordCloud", "WordCloud Generator"]
+      }]
+    
+      const columns = [{
+        Header: 'Project',
+        accessor: 'link', // String-based value accessors!
+        //eslint-disable-next-line
+        Cell: link =><a href={link.value[0]}>{link.value[1]}</a> //TODO: needs some styling
+        }, {
+        Header: 'Live Build',
+        accessor: 'LiveLink',
+        Cell: LiveLink =><a href={LiveLink.value}>{LiveLink.value}</a> // Custom cell components!
+      }]
+  
     return (
       
       <div className="App">
@@ -127,6 +145,13 @@ class App extends Component {
             </tbody>
           </table>
           </div>
+        </div>
+        </section>
+
+        <section id="Projects">
+        <div id="projects-table">
+        <ReactTable className="reactTable" data={data}  columns={columns} />
+    
         </div>
         </section>
          

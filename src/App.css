@@ -137,6 +137,20 @@ body {
   color: #77dfff;
 }
 
+#projects-table
+{
+  padding-top: 5%;
+
+}
+
+.reactTable {
+  margin: 0 auto;
+  
+  width: 50%;
+  /* color: whitesmoke; */
+  background: whitesmoke;
+}
+
 
 
 
