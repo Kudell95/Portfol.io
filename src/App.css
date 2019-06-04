@@ -140,15 +140,27 @@ body {
 #projects-table
 {
   padding-top: 5%;
-
+  padding: 70px 0;
+  position: relative;
 }
 
 .reactTable {
   margin: 0 auto;
-  
+  height: 300px;
   width: 50%;
   /* color: whitesmoke; */
   background: whitesmoke;
+}
+
+#table{
+  margin: 0 auto;
+  margin-top: 10%;
+  top: 50%;
+}
+
+#table h1{
+  color: whitesmoke;
+  padding: 10px;
 }
 
 

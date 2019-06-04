@@ -8,27 +8,106 @@ import 'react-table/react-table.css'
 
 
 
+// window.addEventListener('scroll', function(e) {
+//   var distance = $(window).scrollTop();
+//   var windowHeight = $(window).height();
+
+//   alert($('#nav:nth-child(0)').href);
+//   if(distance < (windowHeight * 1)){
+//   $('#nav:nth-child(0) a').css('color:', '#77dfff');
+//   }else if ( distance > (windowHeight * 1) && distance < (windowHeight * 2))
+//   {
+//     $('#nav:nth-child(0) a').css('color:', '#77dfff');
+//   }else if ( distance > (windowHeight * 2) && distance < (windowHeight * 3))
+//   {
+//     $('#nav:nth-child(0) a').css('color:', '#77dfff');
+//   }
+// });
+
 class App extends Component {
   
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     message: ''
+  //   };
+  //   this.handleScroll = this.handleScroll.bind(this);
+  //   this.handleKeyPress = this.handleKeyPress.bind(this);
+  // }
 
   state = {
     isTop: true,
   };
 
-  componentDidMount() {
-    var height = window.innerHeight;
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 100;
-      if (isTop !== this.state.isTop) {
-          this.setState({ isTop })
-      }
-    });
-  }
+  // componentDidMount() {
+  //   var height = window.innerHeight;
+  //   document.addEventListener('scroll', () => {
+  //     const isTop = window.scrollY < 100;
+  //     if (isTop !== this.state.isTop) {
+  //         this.setState({ isTop })
+  //     }
+  //   });
+  // }
 
+   // change code below this line
+      componentDidMount() {
+      document.addEventListener('scroll', this.handleScroll);
+      window.addEventListener('load', this.handleLoad);
+      }
+      componentWillUnmount() {
+        document.removeEventListener('scroll', this.handleScroll);
+      }
+
+      
+ 
+      handleLoad()
+      {
+        window.scrollTo(0, 0);
+        $('#first').css('color', '#77dfff');
+      }
+  
+      handleScroll()
+      {
+          //somewhat messy solution, but fixes some problems
+          var distance = $(window).scrollTop();
+          var windowHeight = $(window).height();
+          var pathArray = window.location.href.split('/');
+         
+          //FIXME: this is broken, navbar highlight can be easily broken like this.
+          if(( distance > 0 && distance < (windowHeight) ) || pathArray[pathArray.length-1] =="#Home"){
+            $('#first').css('color', '#77dfff');
+            $('#second').css('color', 'whitesmoke');
+            $('#third').css('color', 'whitesmoke');
+            $('#fourth').css('color', 'whitesmoke');
+          }else if ( distance => (windowHeight) && distance < (windowHeight * 2) || pathArray[pathArray.length-1] =="#Skills")
+          {
+            $('#first').css('color', 'whitesmoke');
+            $('#second').css('color', '#77dfff');
+            $('#third').css('color', 'whitesmoke');
+            $('#fourth').css('color', 'whitesmoke');
+          }else if ( distance >= (windowHeight * 2) && distance < (windowHeight * 3) || pathArray[pathArray.length-1] =="#Projects")
+          {
+            $('#first').css('color', 'whitesmoke');
+            $('#second').css('color', 'whitesmoke');
+            $('#third').css('color', '#77dfff');
+            $('#fourth').css('color', 'whitesmoke');
+          }else if ( distance >= (windowHeight * 3) && distance < (windowHeight * 4) || pathArray[pathArray.length-1] =="#Contacts")
+          {
+            $('#first').css('color', 'whitesmoke');
+            $('#second').css('color', 'whitesmoke');
+            $('#third').css('color', 'whitesmoke');
+            $('#fourth').css('color', '#77dfff');
+          }
+      }
+   
+  
 
   render() {
+
+    // <ScrollableComponent   onScroll={this.handleScroll}  />
+
+      
         const data = [{
-        name: 'WordCloud Generator',
         LiveLink: "https://pdftowordcloud.herokuapp.com/",
         link: ["https://github.com/Kudell95/pdfWordCloud", "WordCloud Generator"]
       }]
@@ -46,17 +125,17 @@ class App extends Component {
   
     return (
       
-      <div className="App">
+      <div className="App" >
 
 <header><link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> </header>
+      
 
-
-     <div id="navbar">
+     <div id="navbar" onScroll={this.handleScroll}>
       <ul id="nav">
-              <li><a href="#Contact">Contact</a></li>
-              <li><a href="#Projects">Projects</a></li>
-              <li><a href="#Skills">Skills</a></li>
-              <li><a href="#Home">Home</a></li>     
+              <li><a id="fourth" href="#Contact">Contact</a></li>
+              <li><a id="third" href="#Projects">Projects</a></li>
+              <li><a id="second" href="#Skills">Skills</a></li>
+              <li><a id="first" href="#Home">Home</a></li>     
       </ul>
       </div>
 
@@ -121,7 +200,7 @@ class App extends Component {
         <br/>
         <h1>And i'm a programmer.</h1> */}
         <div id="skills-table">
-          <table cellpadding="10">
+          <table cellPadding="10">
             <colgroup>
               <col />
               <col />
@@ -150,8 +229,10 @@ class App extends Component {
 
         <section id="Projects">
         <div id="projects-table">
-        <ReactTable className="reactTable" data={data}  columns={columns} />
-    
+        <div id="table">
+        <h1>Projects</h1>
+        <ReactTable className="reactTable" minRows={5} data={data}  columns={columns} />
+        </div>
         </div>
         </section>
          
