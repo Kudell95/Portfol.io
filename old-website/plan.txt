@@ -1,7 +1,0 @@
-https://github.com/tannerlinsley/react-table
-
-link to github in table
-for p5 use p5 canvas and use react to change code
-
-
-https://www.bu.edu/tech/about/security-resources/bestpractice/auth/
