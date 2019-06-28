@@ -9,6 +9,7 @@
     "react-particles": "0.0.3",
     "react-particles-js": "^2.5.1",
     "react-scripts": "2.1.8",
+    "react-scrollspy": "^3.4.0",
     "react-table": "^6.10.0"
   },
   "scripts": {

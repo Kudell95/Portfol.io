@@ -4,6 +4,7 @@ import Particles from 'react-particles-js';
 import $ from 'jquery'; 
 import ReactTable from 'react-table'
 import 'react-table/react-table.css'
+import Scrollspy from 'react-scrollspy'
 
 
 
@@ -63,7 +64,7 @@ class App extends Component {
       handleLoad()
       {
         window.scrollTo(0, 0);
-        $('#first').css('color', '#77dfff');
+        // $('#first').css('color', '#77dfff');
       }
   
       handleScroll()
@@ -74,30 +75,30 @@ class App extends Component {
           var pathArray = window.location.href.split('/');
          
           //FIXME: this is broken, navbar highlight can be easily broken like this.
-          if(( distance > 0 && distance < (windowHeight) ) || pathArray[pathArray.length-1] =="#Home"){
-            $('#first').css('color', '#77dfff');
-            $('#second').css('color', 'whitesmoke');
-            $('#third').css('color', 'whitesmoke');
-            $('#fourth').css('color', 'whitesmoke');
-          }else if ( distance => (windowHeight) && distance < (windowHeight * 2) || pathArray[pathArray.length-1] =="#Skills")
-          {
-            $('#first').css('color', 'whitesmoke');
-            $('#second').css('color', '#77dfff');
-            $('#third').css('color', 'whitesmoke');
-            $('#fourth').css('color', 'whitesmoke');
-          }else if ( distance >= (windowHeight * 2) && distance < (windowHeight * 3) || pathArray[pathArray.length-1] =="#Projects")
-          {
-            $('#first').css('color', 'whitesmoke');
-            $('#second').css('color', 'whitesmoke');
-            $('#third').css('color', '#77dfff');
-            $('#fourth').css('color', 'whitesmoke');
-          }else if ( distance >= (windowHeight * 3) && distance < (windowHeight * 4) || pathArray[pathArray.length-1] =="#Contacts")
-          {
-            $('#first').css('color', 'whitesmoke');
-            $('#second').css('color', 'whitesmoke');
-            $('#third').css('color', 'whitesmoke');
-            $('#fourth').css('color', '#77dfff');
-          }
+          // if(( distance > 0 && distance < (windowHeight) ) || pathArray[pathArray.length-1] =="#Home"){
+          //   $('#first').css('color', '#77dfff');
+          //   $('#second').css('color', 'whitesmoke');
+          //   $('#third').css('color', 'whitesmoke');
+          //   $('#fourth').css('color', 'whitesmoke');
+          // }else if ( distance => (windowHeight) && distance < (windowHeight * 2) || pathArray[pathArray.length-1] =="#Skills")
+          // {
+          //   $('#first').css('color', 'whitesmoke');
+          //   $('#second').css('color', '#77dfff');
+          //   $('#third').css('color', 'whitesmoke');
+          //   $('#fourth').css('color', 'whitesmoke');
+          // }else if ( distance >= (windowHeight * 2) && distance < (windowHeight * 3) || pathArray[pathArray.length-1] =="#Projects")
+          // {
+          //   $('#first').css('color', 'whitesmoke');
+          //   $('#second').css('color', 'whitesmoke');
+          //   $('#third').css('color', '#77dfff');
+          //   $('#fourth').css('color', 'whitesmoke');
+          // }else if ( distance >= (windowHeight * 3) && distance < (windowHeight * 4) || pathArray[pathArray.length-1] =="#Contacts")
+          // {
+          //   $('#first').css('color', 'whitesmoke');
+          //   $('#second').css('color', 'whitesmoke');
+          //   $('#third').css('color', 'whitesmoke');
+          //   $('#fourth').css('color', '#77dfff');
+          // }
       }
    
   
@@ -132,10 +133,12 @@ class App extends Component {
 
      <div id="navbar" onScroll={this.handleScroll}>
       <ul id="nav">
+      <Scrollspy items={ ['Contact', 'Projects', 'Skills', 'Home'] } currentClassName="is-current">
               <li><a id="fourth" href="#Contact">Contact</a></li>
               <li><a id="third" href="#Projects">Projects</a></li>
               <li><a id="second" href="#Skills">Skills</a></li>
               <li><a id="first" href="#Home">Home</a></li>     
+      </Scrollspy>
       </ul>
       </div>
 
