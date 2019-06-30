@@ -9,48 +9,15 @@ import Scrollspy from 'react-scrollspy'
 
 
 
-// window.addEventListener('scroll', function(e) {
-//   var distance = $(window).scrollTop();
-//   var windowHeight = $(window).height();
-
-//   alert($('#nav:nth-child(0)').href);
-//   if(distance < (windowHeight * 1)){
-//   $('#nav:nth-child(0) a').css('color:', '#77dfff');
-//   }else if ( distance > (windowHeight * 1) && distance < (windowHeight * 2))
-//   {
-//     $('#nav:nth-child(0) a').css('color:', '#77dfff');
-//   }else if ( distance > (windowHeight * 2) && distance < (windowHeight * 3))
-//   {
-//     $('#nav:nth-child(0) a').css('color:', '#77dfff');
-//   }
-// });
-
 class App extends Component {
   
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     message: ''
-  //   };
-  //   this.handleScroll = this.handleScroll.bind(this);
-  //   this.handleKeyPress = this.handleKeyPress.bind(this);
-  // }
 
-  state = {
-    isTop: true,
-  };
+      state = {
+        isTop: true,
+      };
+      
 
-  // componentDidMount() {
-  //   var height = window.innerHeight;
-  //   document.addEventListener('scroll', () => {
-  //     const isTop = window.scrollY < 100;
-  //     if (isTop !== this.state.isTop) {
-  //         this.setState({ isTop })
-  //     }
-  //   });
-  // }
 
-   // change code below this line
       componentDidMount() {
       document.addEventListener('scroll', this.handleScroll);
       window.addEventListener('load', this.handleLoad);
@@ -64,53 +31,27 @@ class App extends Component {
       handleLoad()
       {
         window.scrollTo(0, 0);
-        // $('#first').css('color', '#77dfff');
+       
       }
   
       handleScroll()
       {
-          //somewhat messy solution, but fixes some problems
+          //old code, can probably be removed
           var distance = $(window).scrollTop();
           var windowHeight = $(window).height();
           var pathArray = window.location.href.split('/');
-         
-          //FIXME: this is broken, navbar highlight can be easily broken like this.
-          // if(( distance > 0 && distance < (windowHeight) ) || pathArray[pathArray.length-1] =="#Home"){
-          //   $('#first').css('color', '#77dfff');
-          //   $('#second').css('color', 'whitesmoke');
-          //   $('#third').css('color', 'whitesmoke');
-          //   $('#fourth').css('color', 'whitesmoke');
-          // }else if ( distance => (windowHeight) && distance < (windowHeight * 2) || pathArray[pathArray.length-1] =="#Skills")
-          // {
-          //   $('#first').css('color', 'whitesmoke');
-          //   $('#second').css('color', '#77dfff');
-          //   $('#third').css('color', 'whitesmoke');
-          //   $('#fourth').css('color', 'whitesmoke');
-          // }else if ( distance >= (windowHeight * 2) && distance < (windowHeight * 3) || pathArray[pathArray.length-1] =="#Projects")
-          // {
-          //   $('#first').css('color', 'whitesmoke');
-          //   $('#second').css('color', 'whitesmoke');
-          //   $('#third').css('color', '#77dfff');
-          //   $('#fourth').css('color', 'whitesmoke');
-          // }else if ( distance >= (windowHeight * 3) && distance < (windowHeight * 4) || pathArray[pathArray.length-1] =="#Contacts")
-          // {
-          //   $('#first').css('color', 'whitesmoke');
-          //   $('#second').css('color', 'whitesmoke');
-          //   $('#third').css('color', 'whitesmoke');
-          //   $('#fourth').css('color', '#77dfff');
-          // }
       }
    
   
 
   render() {
-
-    // <ScrollableComponent   onScroll={this.handleScroll}  />
-
-      
+        //React Tables setup   
         const data = [{
         LiveLink: "https://pdftowordcloud.herokuapp.com/",
         link: ["https://github.com/Kudell95/pdfWordCloud", "WordCloud Generator"]
+      },{
+        LiveLink: "https://portfoli0.herokuapp.com/",
+        link: ["https://github.com/Kudell95/Portfol.io", "Portfolio"]
       }]
     
       const columns = [{
@@ -186,7 +127,7 @@ class App extends Component {
         
         <div id="sections">
 
-        
+        {/* --------------------------- Home -------------------------  */}
         <section id="Home">
         <div id="intro-text">
         <h1>Hi, my name is Matt.</h1>
@@ -196,12 +137,12 @@ class App extends Component {
         </section>
 
         
+
+        {/* ------------------------ Skills --------------------------- */}
         <section id="Skills">
         <div id="skills-text">
         <h2 style={{ position: 'fixed', top: 0 }}>Scroll {this.state.isTop ? 'down' : 'up'}!</h2>
-        {/* <h1>Hi, my name is Matt.</h1>
-        <br/>
-        <h1>And i'm a programmer.</h1> */}
+
         <div id="skills-table">
           <table cellPadding="10">
             <colgroup>
@@ -229,7 +170,9 @@ class App extends Component {
           </div>
         </div>
         </section>
+        
 
+        {/* ----------------------- Projects ------------------------ */}
         <section id="Projects">
         <div id="projects-table">
         <div id="table">
@@ -238,11 +181,22 @@ class App extends Component {
         </div>
         </div>
         </section>
+
+        
+
+        {/* -------------------- Contact ------------------------- */}
+        <section id="Contact">
+          <div id="intro-text">
+          <h1>Matthew Kudell</h1>
+          <br/>
+          <p>email: <a href='mailto:kudell95@hotmail.com'>kudell95@hotmail.com</a></p>
+          </div>
+        </section>
          
 
-        </div>
-  
       </div>
+  
+    </div>
     );
   }
 }

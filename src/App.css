@@ -1,15 +1,20 @@
 
 .is-current
 {
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
   color: #282c34 !important;
 }
 
 .is-current a
 {
-  background-color: whitesmoke;
-  color: #282c34 !important;
+  background-color: #434547;
+  color: #77dfff !important;
   z-index: 5;
+}
+
+a
+{
+  color: #0c7291;
 }
 
 
@@ -62,8 +67,8 @@ body {
   position: fixed;
   list-style: none;
   background-color: #505153;
-  border-bottom: 1px solid rgb(105, 102, 109); 
-  border-top: 1px solid rgb(105, 102, 109);
+  /* border-bottom: 1px solid rgb(105, 102, 109);  */
+  /* border-top: 1px solid rgb(105, 102, 109); */
   z-index: 100;
 }
 
@@ -86,7 +91,7 @@ body {
   text-decoration: none;
   
   color: whitesmoke;
-  border-right: 1px solid rgb(105, 102, 109); 
+  /* border-right: 1px solid rgb(105, 102, 109);  */
   z-index: 100;
 }
 
@@ -185,6 +190,18 @@ section #Home:hover ~ #nav a[href="#Skills"]
 #table h1{
   color: whitesmoke;
   padding: 10px;
+}
+
+
+#email 
+{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#footer
+{
+  
 }
 
 
