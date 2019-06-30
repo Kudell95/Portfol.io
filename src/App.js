@@ -69,7 +69,7 @@ class App extends Component {
       
       <div className="App" >
 
-<header><link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> </header>
+      <header><link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/8bit-wonder" type="text/css"/> </header>
       
 
      <div id="navbar" onScroll={this.handleScroll}>
@@ -165,6 +165,16 @@ class App extends Component {
               <td>C++</td>
               <td>Linux CLI</td>
             </tr>
+            <tr>
+              <td></td>
+              <td>C#</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>PHP</td>
+              <td></td>
+            </tr>
             </tbody>
           </table>
           </div>
@@ -190,6 +200,7 @@ class App extends Component {
           <h1>Matthew Kudell</h1>
           <br/>
           <p>email: <a href='mailto:kudell95@hotmail.com'>kudell95@hotmail.com</a></p>
+          <a href="https://github.com/Kudell95/Resume">Resume</a>
           </div>
         </section>
          
