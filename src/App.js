@@ -200,7 +200,10 @@ class App extends Component {
           <h1>Matthew Kudell</h1>
           <br/>
           <p>email: <a href='mailto:kudell95@hotmail.com'>kudell95@hotmail.com</a></p>
+          <br/>
           <a href="https://github.com/Kudell95/Resume">Resume</a>
+          <br/>
+          <a href="https://github.com/Kudell95/">Github</a>
           </div>
         </section>
          
