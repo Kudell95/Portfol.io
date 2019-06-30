@@ -52,6 +52,10 @@ class App extends Component {
       },{
         LiveLink: "https://portfoli0.herokuapp.com/",
         link: ["https://github.com/Kudell95/Portfol.io", "Portfolio"]
+      },
+      {
+        LiveLink: "https://github.com/Kudell95/TODO-list",
+        link: ["No Live app available", "Todo  List"]
       }]
     
       const columns = [{
@@ -202,6 +206,7 @@ class App extends Component {
           <p>email: <a href='mailto:kudell95@hotmail.com'>kudell95@hotmail.com</a></p>
           <br/>
           <a href="https://github.com/Kudell95/Resume">Resume</a>
+          <br/>
           <br/>
           <a href="https://github.com/Kudell95/">Github</a>
           </div>
